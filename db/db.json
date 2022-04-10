@@ -1,6 +1,16 @@
-[
+{
+  "notes": [
     {
-        "title":"Test Title",
-        "text":"Test text"
+      "title": "Test Title",
+      "text": "Test text"
+    },
+    {
+      "title": "Study Hard",
+      "text": "Study Express.js"
+    },
+    {
+      "title": "Study Hard",
+      "text": "Study Express.js"
     }
-]
+  ]
+}
