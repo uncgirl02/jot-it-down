@@ -6,6 +6,7 @@ const { v4: uuidv4 } = require('uuid');
 uuidv4();
 
 const notes = require('./db/db.json');
+const { json } = require('express/lib/response');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -89,22 +90,24 @@ app.post('/api/notes', (req, res) => {
 
 
 app.delete(`/api/notes/:id`, (req, res) => {
-
-  fs.readFile("./db/db.json", "utf8", (err, notes) => {
-    if (err) throw err;
-  const allNotes = JSON.parse(notes)
-  const noteToDelete = req.params.id;
-  console.log (req.params.id)
-  })
+  const idToDelete = req.params.id;
+  console.log (idToDelete);
   
-  const newNotesArray = allNotes.filter(note =>
-    notes.notes.id != noteToDelete);
+  fs.readFile("./db/db.json", (err, notes) => {
+    if (err) throw err;
+    else json(notes.notes);
+  });
+  const newNotesArray = (notes.notes).filter(note => {
+    // check if id of current note is the same as the id of the note to be deleted, if it is not, then return true
+    note.id != idToDelete
+  })
+  console.log(newNotesArray);
 
   fs.writeFileSync(__dirname + "/../db/db.json", newNotesArray, (err) => {
     if (err) throw err;
   });
 
-  res.json(result);
+  res.json(newNotesArray);
 });
 
     
