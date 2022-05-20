@@ -18,8 +18,8 @@ Jot It Down is a note taking app that allows you to write and store notes in you
 
 ## Installation
 
-Run "npm install" to install the required packages. The app is deployed using Heroku.
-https://frozen-mountain-40564.herokuapp.com/
+Run "npm install" to install the required packages. The app is deployed using Heroku at
+https://nameless-ravine-81892.herokuapp.com/.git 
 
 ## Usage
 

@@ -28,7 +28,6 @@ function createNewNote(body, notesArray) {
   return newNote;
 }
 
-
 function validateNote() {
   if (!notes.title || typeof notes.title !== 'string') {
     return false;
