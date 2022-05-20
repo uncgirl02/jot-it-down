@@ -1,34 +1,24 @@
 {
-  "notes": [
-    {
-      "title": "Erin",
-      "text": "Erin rocks",
-      "id": "acb8e2ca-03ed-418a-9388-cbcd6395a2e2"
-    },
-    {
-      "title": "Caryy",
-      "text": "Hello",
-      "id": "3ba6c31d-9d18-4313-8321-fad0319a9a56"
-    },
-    {
-      "title": "hello",
-      "text": "hello",
-      "id": "1610cd15-d854-43b4-bde6-be231f6d622a"
-    },
-    {
-      "title": "Kitty",
-      "text": "Hola",
-      "id": "12b03bef-fda4-49ce-bf31-df1755b261ef"
-    },
-    {
-      "title": "Mone",
-      "text": "Mone",
-      "id": "fccfed7f-e98e-4264-9c75-aa3c69409549"
-    },
-    {
-      "title": "David",
-      "text": "Is putting together a puzzle",
-      "id": "3d14dd62-7b24-4427-865b-e8111ccf46b6"
-    }
-  ]
-}
+    "notes": [
+      {
+        "title": "Clean Car",
+        "text": "Take to Car Wash",
+        "id": "acb8e2ca-03ed-418a-9388-cbcd6395a2e2"
+      },
+      {
+        "title": "Study",
+        "text": "Study for Coding Class",
+        "id": "3ba6c31d-9d18-4313-8321-fad0319a9a56"
+      },
+      {
+        "title": "Birthday Card",
+        "text": "Buy Birthday Cards for mom, Ben, and David",
+        "id": "1610cd15-d854-43b4-bde6-be231f6d622a"
+      },
+      {
+        "title": "Shopping List",
+        "text": "Milk, Bread, Eggs",
+        "id": "12b03bef-fda4-49ce-bf31-df1755b261ef"
+      }
+    ]
+  }

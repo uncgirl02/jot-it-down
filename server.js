@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 function createNewNote(body, notesArray) {
-  notesArray = (notes) ? notesArray = notes.notes : notesArray = [];
+  notesArray = notes.notes
   const newNote = body;
   newNote.id = uuidv4();
   notesArray.push(newNote);
@@ -39,32 +39,7 @@ function validateNote() {
   return true;
 };
 
-//function deleteNote() {
-//   //get id of deleted note
-//   // const deletedNoteId = req.params.id
-//   const noteId  = req.params.id.toString()
- 
-//   //loop through array of notes
-//   for (let i = 0; i < notesArray.length; i++) {
-//     if( noteId === notes.notes.id) {
-//       const parsedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf-8"));
-//       const newArray = parsedNotes.filter( notes => notes.notes.id.toString() !== deletedNoteId );
-//       fs.writeFileSync('./db/db.json', JSON.stringify(newArray));
-//     }
-//   }
-//   return newArray;
-// }
 
-//   const { id } = req.params;
-//   const notes = JSON.parse(fs.readFileSync("./db/db.json", "utf-8"));
-
-//   const noteToDelete = notes.findIndex(note => note.note_id === id);
-
-//   notes.splice(noteToDelete, 1);
-
-//   writeToFile("./db/db.json", notes);
-//   return res.send();
-// };
 
 app.get('/', (req,res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
@@ -89,28 +64,25 @@ app.post('/api/notes', (req, res) => {
 })
 
 
-app.delete(`/api/notes/:id`, (req, res) => {
-  const idToDelete = req.params.id;
-  console.log (idToDelete);
+// app.delete(`/api/notes/:id`, (req, res) => {
+//   const idToDelete = req.params.id;
+//   console.log (idToDelete);
   
-  fs.readFile("./db/db.json", (err, notes) => {
-    if (err) throw err;
-    else json(notes.notes);
-  });
-  const newNotesArray = (notes.notes).filter(note => {
-    // check if id of current note is the same as the id of the note to be deleted, if it is not, then return true
-    note.id != idToDelete
-  })
-  console.log(newNotesArray);
+//   const newNotesArray = notes.notes.filter(notes => {
+//     // check if id of current note is the same as the id of the note to be deleted, if it is not, then return true
+//     notes.id !== idToDelete
+//   });
+//   console.log(newNotesArray);
 
-  fs.writeFileSync(__dirname + "/../db/db.json", newNotesArray, (err) => {
-    if (err) throw err;
-  });
 
-  res.json(newNotesArray);
-});
+//   fs.writeFileSync("./db/db.json", JSON.stringify(newNotesArray), 
+//   (err) => {
+//     if (err) throw err;
+//   });
+//   // response.json(newNotesArray);
+// });
 
     
 app.listen(PORT, () => {
 console.log(`API server now on port ${PORT}!`);
-});  
+}); 
